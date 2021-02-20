@@ -17,7 +17,9 @@ public class ColumnNames_Definitions{
         public void the_user_should_see_the_following_column_names( List<String>  ExpectedTablesNames) {
                 List<String> actualTableNames = new ArrayList<>();
                 for(WebElement each: bookManagementTable.tableNames){
+                        each.isDisplayed();
                         actualTableNames.add(each.getText());
+
                 }
 
                 System.out.println(ExpectedTablesNames);
