@@ -1,5 +1,6 @@
-package com.libraryCT.pages.base;
+package com.libraryCT.pages;
 
+import com.libraryCT.pages.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

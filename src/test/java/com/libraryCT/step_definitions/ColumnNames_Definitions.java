@@ -1,6 +1,6 @@
 package com.libraryCT.step_definitions;
 
-import com.libraryCT.pages.base.BookManagementTable;
+import com.libraryCT.pages.BookManagementTable;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
