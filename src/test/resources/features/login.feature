@@ -4,7 +4,6 @@ Feature: Login Functionality
   Background:
     Given the user on login page
 
-
   @wip
   Scenario Outline: verify both Students and librarians  login
     When the user login as a <role>

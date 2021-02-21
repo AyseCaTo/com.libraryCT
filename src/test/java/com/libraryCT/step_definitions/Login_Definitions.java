@@ -1,15 +1,18 @@
 package com.libraryCT.step_definitions;
 
+import com.libraryCT.pages.HomePage;
 import com.libraryCT.pages.LoginPage;
 import com.libraryCT.utilities.ConfigurationReader;
 import com.libraryCT.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
-public class login_definitions {
+public class Login_Definitions {
 
     LoginPage loginPage = new LoginPage();
+    HomePage homePage = new HomePage();
 
     @Given("the user on login page")
     public void the_user_on_login_page() {
@@ -20,19 +23,20 @@ public class login_definitions {
     public void the_user_login_as_a_student() {
         loginPage.loginAsStudent();
     }
+
     @Then("the user on  books")
     public void the_user_on_books() {
-
+        Assert.assertTrue(homePage.booksTitle.isDisplayed());
     }
 
     @When("the user login as a librarian")
     public void the_user_login_as_a_librarian() {
        loginPage.loginAsLibrarian();
     }
+
     @Then("the user on  Dashboard")
     public void the_user_on_dashboard() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Assert.assertTrue(homePage.dashboardTitle.isDisplayed());
     }
 
 
