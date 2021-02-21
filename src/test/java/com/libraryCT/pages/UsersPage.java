@@ -16,6 +16,9 @@ public class UsersPage extends BasePage {
     @FindBy(id = "user_groups")
     public WebElement userGroupDropdown;
 
+    @FindBy(xpath = "//table//th")
+    public List<WebElement> tableHeaderList;
+
     public List<String> actualList(){
         Select userCategories = new Select(userGroupDropdown);
         List<WebElement> categories = userCategories.getOptions();
@@ -24,6 +27,14 @@ public class UsersPage extends BasePage {
             actualList.add(category.getText());
         }
         return actualList;
+    }
+
+    public List<String> actualHeaderList(){
+        List<String> actualHeaderList = new ArrayList<>();
+        for (WebElement webElement : tableHeaderList) {
+            actualHeaderList.add(webElement.getText());
+        }
+        return actualHeaderList;
     }
 
 
