@@ -20,7 +20,7 @@ public class AddUsers_StepDefinitions {
 
 
     @Then("Librarian able to close the add users window with close button")
-    public void librarian_able_to_close_the_add_users_window_with_close_button() {
+    public void librarian_able_to_close_the_add_users_window_with_close_button() throws InterruptedException {
        addUsersPage.ableToClose();
     }
     @Then("Librarian able to edit user info")
