@@ -17,4 +17,4 @@ Feature: can see all modules
     Then liberian should see modules
       | Dashboard       |
       | Users           |
-      | Books |
+      | Books           |
