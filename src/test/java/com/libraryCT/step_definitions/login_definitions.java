@@ -31,8 +31,7 @@ public class login_definitions {
     }
     @Then("the user on  Dashboard")
     public void the_user_on_dashboard() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
     }
 
 
