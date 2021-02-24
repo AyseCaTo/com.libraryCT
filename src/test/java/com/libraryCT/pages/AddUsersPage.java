@@ -9,6 +9,14 @@ import org.openqa.selenium.support.ui.Select;
 
 public class AddUsersPage extends BasePage {
 
+       Faker faker = new Faker();
+        String fullName = faker.name().fullName();
+        String password = faker.internet().password();
+        String email = faker.internet().emailAddress();
+        String address = faker.address().fullAddress();
+        String startDate = faker.date().toString();
+        String endDate =faker.date().toString();
+
         @FindBy(xpath="//*[@id='menu_item']/li[2]/a")
         public WebElement users;
         @FindBy(xpath = "//*[@id='users']/div[1]/div[1]/span/a")
@@ -23,41 +31,41 @@ public class AddUsersPage extends BasePage {
         public WebElement saveChanges;//*[@id="add_user_form"]/div[2]/button[2]
         @FindBy(xpath = "//*[@id='add_user_form']/div[2]/button[1]")
         public WebElement closeAddUser;
-        @FindBy(xpath="//*[@id='tbl_users']/tbody/tr[1]/td[1]/a")
+        @FindBy(xpath="(//*[@id='tbl_users']/tbody/tr[1]/td[1]/a)[1]")
+           //*[@id="tbl_users"]/tbody/tr[1]/td[1]/a
         public WebElement editUser;
-        @FindBy(xpath= "//*[@id='user_group_id']")
-        public WebElement userGroup;
+        @FindBy(xpath= "//*[@id='edit_user_form']/div[1]/div/div[1]/div/div/input")
+        public WebElement changeUserName;
         @FindBy(xpath = "//*[@id='address']")
         public  WebElement inputAddress;
         @FindBy(xpath = "//*[@id='edit_user_form']/div[2]/button[2]")
         public WebElement saveEditUser;
 
+
         public void ableToAddUser(){
-                Faker faker = new Faker();
-                String fullName = faker.name().fullName();
-                String password = faker.random().toString();
-                String email = faker.name().firstName();
 
                 users.click();
                 addUser.click();
                 inputFullName.sendKeys(fullName);
                 inputPassword.sendKeys(password);
-                inputEmail.sendKeys(email+"@gmail.com");
+                inputEmail.sendKeys(email);
+                inputAddress.sendKeys(address);
                 saveChanges.click();
 
         }
 
         public void ableToClose(){
+                users.click();
                 addUser.click();
                 closeAddUser.click();
 
         }
 
         public void ableToEdit(){
-                Faker faker = new Faker();
-                String address = faker.address().fullAddress();
+                users.click();
                 editUser.click();
-                inputAddress.sendKeys(address);
+                changeUserName.clear();
+                changeUserName.sendKeys(fullName);
                 saveEditUser.click();
 
         }
