@@ -1,6 +1,8 @@
 package com.libraryCT.step_definitions;
 
+;
 import com.libraryCT.pages.AddUsersPage;
+import com.libraryCT.utilities.BrowserUtils;
 import com.libraryCT.utilities.ConfigurationReader;
 import com.libraryCT.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -9,23 +11,29 @@ import io.cucumber.java.en.When;
 
 public class AddUsers_StepDefinitions {
 
-    AddUsersPage addUsersPage = new AddUsersPage();
+   AddUsersPage addUsersPage =new AddUsersPage();
 
-    @When("Librarian add users with all valid info")
-    public void librarian_add_users_with_all_valid_info() {
-       addUsersPage.ableToAddUser();
+
+   @When("User click on user button")
+   public void user_click_on_user_button() {}
+   @Then("Librarian add user")
+   public void librarian_add_user() { addUsersPage.ableToAddUser(); }
+
+
+   @When("Librarian click on users link")
+   public void librarian_click_on_users_link() {}
+   @Then("Librarian can close the pop-up window")
+   public void librarian_can_close_the_pop_up_window() {addUsersPage.ableToClose();
+}
+
+
+    @When("Librarian click the edit user button")
+    public void librarian_click_the_edit_user_button() {}
+    @Then("Librarian can change the information")
+    public void librarian_can_change_the_information() {addUsersPage.ableToEdit();
+
     }
 
 
-
-
-    @Then("Librarian able to close the add users window with close button")
-    public void librarian_able_to_close_the_add_users_window_with_close_button() throws InterruptedException {
-       addUsersPage.ableToClose();
-    }
-    @Then("Librarian able to edit user info")
-    public void librarian_able_to_edit_user_info() {
-       addUsersPage.ableToEdit();
-    }
 
 }

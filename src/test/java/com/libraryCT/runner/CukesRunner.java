@@ -14,8 +14,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/libraryCT/step_definitions",
-        dryRun = false,
-        tags = "@addUsers"
+        dryRun = true,
+        tags = "@edit"
 
 )
 

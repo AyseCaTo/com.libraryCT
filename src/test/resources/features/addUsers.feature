@@ -6,8 +6,16 @@ Feature: Add users
     When the user login as a librarian
 
     @addUsers
-    Scenario:
-      When Librarian add users with all valid info
-      Then Librarian able to close the add users window with close button
-      Then Librarian able to edit user info
+    Scenario:Librarian should add user
+      When User click on user button
+      Then Librarian add user
 
+      @close
+      Scenario: Librarian should close the window
+        When Librarian click on users link
+        Then Librarian can close the pop-up window
+
+        @edit
+        Scenario: Librarian should able to edit user information
+          When Librarian click the edit user button
+          Then Librarian can change the information
