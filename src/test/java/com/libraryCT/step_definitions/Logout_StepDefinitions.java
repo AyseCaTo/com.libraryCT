@@ -10,7 +10,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class Logout_Definitions {
+public class Logout_StepDefinitions {
 
     HomePage homePage = new HomePage();
 

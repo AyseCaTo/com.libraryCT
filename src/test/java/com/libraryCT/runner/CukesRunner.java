@@ -16,7 +16,6 @@ import org.junit.runner.RunWith;
         glue = "com/libraryCT/step_definitions",
         dryRun = true,
         tags = "@statusFeature"
-
 )
 
 public class CukesRunner {

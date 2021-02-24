@@ -9,7 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class Login_Definitions {
+public class Login_StepDefinitions {
 
     LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
@@ -31,13 +31,12 @@ public class Login_Definitions {
 
     @When("the user login as a librarian")
     public void the_user_login_as_a_librarian() {
-       loginPage.loginAsLibrarian();
+        loginPage.loginAsLibrarian();
     }
 
     @Then("the user on  Dashboard")
     public void the_user_on_dashboard() {
         Assert.assertTrue(homePage.dashboardTitle.isDisplayed());
     }
-
 
 }
