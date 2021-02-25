@@ -1,8 +1,8 @@
 Feature: Data Table Values
 
   Background:
-    Given User is on the login page
-    When User login as a librarian
+    Given the user on login page
+    When the user login as a librarian
 @book
   Scenario: verify default values in Users page
     And User click on "Users" link
