@@ -7,16 +7,22 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
-        plugin = {
-                "html:target/cucumber-report.html",
+        plugin = {"html:target/cucumber-report.html",
                 "json:target/cucumber.json",
-                "rerun:target/rerun.txt"
+                "rerun:target/rerun.txt",
+                "pretty",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+                "timeline:test-output-thread/"
         },
         features = "src/test/resources/features",
         glue = "com/libraryCT/step_definitions",
-        dryRun = true,
-        tags = "@searchCategory"
+        dryRun = false,
+        tags = ""
 )
 
-public class CukesRunner {
+public class ParallelTesting {
+
+
+
+
 }
