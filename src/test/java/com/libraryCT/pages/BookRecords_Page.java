@@ -3,15 +3,35 @@ package com.libraryCT.pages;
 import com.libraryCT.pages.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 import javax.xml.xpath.XPath;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BookRecords_Page extends BasePage {
 
-@FindBy(xpath=("//div[@id='tbl_books_wrapper']//option[@value=10]"))
-    public WebElement  records10;
+    @FindBy(xpath="//a[@href='#users']")
+    public WebElement getUsersLink;
 
-@FindBy(xpath = ("//div[@id='tbl_books_wrapper']//option"))
-    public WebElement allOptions;
+    @FindBy(xpath = "//select[@name='tbl_users_length']")
+    public WebElement showRecordsDropDown;
+    public int defaultValue(){
+        Select showRecords = new Select(showRecordsDropDown);
+        return Integer.parseInt(String.valueOf(showRecords.getFirstSelectedOption().getText()));
+    }
+
+    public List<String> actualList(){
+        Select showRecords = new Select(showRecordsDropDown);
+        List<WebElement> options = showRecords.getOptions();
+        List<String> actualList = new ArrayList<>();
+        for (WebElement webElement : options) {
+            actualList.add(webElement.getText());
+        }
+        return actualList;
+    }
+
 
 }
+
+
