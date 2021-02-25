@@ -34,7 +34,7 @@
                     <perCoreThreadCount>false</perCoreThreadCount>
                     <testFailureIgnore>true</testFailureIgnore>
                     <includes>
-                        <include>**/ParallelTesting*.java</include>
+                        <include>**/CukesRunner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -101,12 +101,6 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>tech.grasshopper</groupId>
-            <artifactId>extentreports-cucumber6-adapter</artifactId>
-            <version>2.6.0</version>
-            <scope>test</scope>
-        </dependency>
 
     </dependencies>
 
