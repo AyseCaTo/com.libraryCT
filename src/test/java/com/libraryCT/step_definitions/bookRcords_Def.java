@@ -1,16 +1,14 @@
 package com.libraryCT.step_definitions;
 
 import com.libraryCT.pages.BookRecords_Page;
-import com.libraryCT.pages.HomePage;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 import java.util.List;
 
-public class bookRcords_Def {
+public class BookRecords_StepDefinitions {
 
     BookRecords_Page bookRecords_page= new BookRecords_Page();
    
