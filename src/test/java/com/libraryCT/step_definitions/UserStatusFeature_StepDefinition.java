@@ -1,6 +1,6 @@
 package com.libraryCT.step_definitions;
 
-import com.libraryCT.pages.base.UserStatusFeaturePage;
+import com.libraryCT.pages.UserStatusFeaturePage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;

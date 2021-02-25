@@ -9,7 +9,7 @@ import javax.xml.xpath.XPath;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookRecords_Page extends BasePage {
+public class BookRecordsPage extends BasePage {
 
     @FindBy(xpath="//a[@href='#users']")
     public WebElement getUsersLink;

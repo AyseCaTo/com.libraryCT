@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ColumnNames_Definitions{
+public class ColumnNames_StepDefinitions {
 
         BookManagementTable bookManagementTable = new BookManagementTable();
 

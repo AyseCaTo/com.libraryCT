@@ -1,5 +1,6 @@
-package com.libraryCT.pages.base;
+package com.libraryCT.pages;
 
+import com.libraryCT.pages.base.BasePage;
 import com.libraryCT.utilities.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserStatusFeaturePage extends BasePage{
+public class UserStatusFeaturePage extends BasePage {
 
 
     @FindBy(xpath="//*[@id='menu_item']/li[2]/a")

@@ -6,7 +6,7 @@ Feature: Data Table Values
 @book
   Scenario: verify default values in Users page
     And User click on "Users" link
-    Then show records default value should be "10"
+    Then show records default value should be 10
     And show records should have following options:
       | 5   |
       | 10  |

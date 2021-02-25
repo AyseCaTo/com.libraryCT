@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BorrowingStep_definitions {
+public class Borrowing_StepDefinitions {
 
 
     BorrowingPage bPage = new BorrowingPage();

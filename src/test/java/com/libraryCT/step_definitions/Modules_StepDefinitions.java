@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class modules_step_definitions {
+public class Modules_StepDefinitions {
     ModulePage modulePage = new ModulePage();
 
 
@@ -38,7 +38,7 @@ public class modules_step_definitions {
 
 
        // verifying if we can click our expecting modules a get the right page with the url
-       Assert.assertTrue(actualUrl.equals(expModules));
+        Assert.assertEquals(actualUrl, expModules);
         
     }
 
@@ -75,7 +75,7 @@ public class modules_step_definitions {
         actualUrl.add(booksActUrl1);
 
         // verifying if we can click our expecting modules a get the right page with the url
-        Assert.assertTrue(actualUrl.equals(expModules));
+        Assert.assertEquals(actualUrl, expModules);
 
     }
 
